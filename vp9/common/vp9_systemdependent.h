@@ -13,7 +13,9 @@
 
 #ifdef _MSC_VER
 #include <math.h>
+#if _MSC_VER<1900
 #define snprintf _snprintf
+#endif
 #endif
 
 #include "./vpx_config.h"

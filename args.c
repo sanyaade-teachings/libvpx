@@ -15,7 +15,9 @@
 #include "args.h"
 
 #ifdef _MSC_VER
+#if _MSC_VER<1900
 #define snprintf _snprintf
+#endif
 #endif
 
 #if defined(__GNUC__) && __GNUC__

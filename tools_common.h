@@ -30,9 +30,11 @@ typedef __int64 off_t;
 #if CONFIG_OS_SUPPORT
 #if defined(_MSC_VER)
 #include <io.h>  /* NOLINT */
+#if _MSC_VER<1900
 #define snprintf _snprintf
 #define isatty   _isatty
 #define fileno   _fileno
+#endif
 #else
 #include <unistd.h>  /* NOLINT */
 #endif  /* _MSC_VER */
